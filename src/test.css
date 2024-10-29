@@ -1,0 +1,786 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('./assets/BlackGround.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+  
+  /* Header Navbar Sections*/
+  header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  
+  .navbar-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  header .logo {
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  .navbar-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+  }
+  
+  header input[type="search"] {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 600px;
+    color: #0000ff;
+    background-color: #ffffff;
+    box-sizing: border-box;
+  }
+  
+  .navbar-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .navbar-right .dropdown select,
+  .navbar-right button {
+    background-color: #000000;
+    color: #ffffff;
+    border: solid;
+    padding: 10px;
+    border-radius: 3px;
+    border-color: #0000ff;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .checkout {
+    font-size: 1.5em;
+  }
+  /* End Header Navbar Sections*/
+  
+  /*Item card buttons*/
+  button {
+    border-radius: 8px;
+    border: 1px solid;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background:  #1100ff;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    border-color: #000000;
+  }
+  
+  .deletebutton {
+    border-radius: 8px;
+    border: 1px solid;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background:  #ff0000;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    border-color: #000000;
+  }
+   /*End Item card buttons*/
+  
+    /*Carosel category select with scroll */
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+  }
+  
+  .carousel-arrow {
+    background-color: #1100ff;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-arrow.left {
+    left: 0; /* Position left arrow at the left edge */
+  }
+  
+  .carousel-arrow.right {
+    right: 0; /* Position right arrow at the right edge */
+  }
+  
+  .carousel-content {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Allow the carousel content to take up the remaining space */
+    gap: 10px; /* Add some space between category buttons */
+    margin-bottom: 20px
+  }
+  
+  .carousel-category {
+    background: linear-gradient(180deg, #5e259e, #320a4d);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    min-width: 100px;
+    text-align: center;
+  }
+   /*End Carosel category select with scroll */   
+  
+  h3 {    
+    color: #0000ff;
+  }
+  
+  /* Main Container */
+  .container {
+    padding: 80px 20px 20px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  /* Card Items Section */  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    row-gap: 20px; /* Adds space between the rows */
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: linear-gradient(180deg, #5e259e, #320a4d);
+    border: 1px solid #003cff;
+    min-height: 400px; /* Ensures all cards are at least 400px tall */
+    width: 260px;
+  }
+  
+  .card img.card-img-top {
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffe600;
+  }
+  
+  .card-text {
+    flex-grow: 1;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .seller-name {
+    flex-grow: 1;
+    margin-bottom: 15px;
+    color: #48ff00;
+  }
+  /* End Card Items Section */
+  
+  /* Placeholder for missing images */
+  .placeholder-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    height: 200px;
+    color: #fff;
+    text-align: center;
+    border-radius: 3px 3px 0 0;
+  }  
+ 
+   /* Dashboard Container account details */
+   .dashboard-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }  
+  
+  .account-details {
+    background: linear-gradient(180deg, #7700FF, #3A007D);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  .account-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .account-info {
+    border-radius: 15px;
+    padding: 10px;
+  }
+  
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional: To add a subtle divider between rows */
+  }
+  
+  .info-row:last-child {
+    border-bottom: none; /* Remove the bottom border from the last row */
+  }
+  
+  .edit-account {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px 15px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .edit-account:hover {
+    background-color: white;
+    color: #3A007D; /* Adjust based on your theme */
+  }
+/*End Dashboard Container account details */
+
+  /* User listing heading with create button*/
+  .user-listings {
+    width: 80%;
+    margin-top: 20px;
+  }
+  
+  .user-listings h2 {
+    margin-bottom: 10px;
+  }
+  
+  .create-listing {
+    background-color: #1100ff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  /*End User listing heading with create button*/
+  
+    
+  
+  /* Styles for Create Listing page */
+  .create-listing-section {
+    width: 100%;
+    background: linear-gradient(180deg, #5e259e, #320a4d);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .create-listing-section h2 {
+    margin-top: 0;
+  }
+  
+  .listing-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .listing-form label {
+    display: block;
+    margin-bottom: 10px; /* Space below the label */
+    font-weight: bold; /* Make the labels bold */
+  }
+  
+  .listing-form input[type="text"],
+  .listing-form input[type="number"],
+  .listing-form input[type="date"],
+  .listing-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* Space below the input fields */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #000;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+  
+  .existing-images h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .image-preview img {
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+  .form-table { /* create form fields */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px 40px;
+    margin-bottom: 20px;
+  }
+
+  .form-row {
+    display: contents;
+  }
+  
+  .form-row label {
+    align-self: center;
+    font-weight: bold;
+  }
+  
+  .form-row input, .form-row textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    background: #fff;
+    color: #000;
+  }
+
+  .image-upload-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .image-upload {
+    background: linear-gradient(to right, #5e259e, #5e259e);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 45%;
+  }
+  
+  .image-upload label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  
+  .image-preview {
+    width: 45%;
+  }
+  
+  .image-preview h3 {
+    margin-bottom: 10px;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .preview-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .create-listing-button {
+    background-color: #1100ff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+
+  .input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-with-icon input {
+    width: 100%;
+    padding-right: 30px; /* Space for the icon */
+  }
+  
+  .input-with-icon i {
+    position: absolute;
+    right: 15px;
+    color: #000;
+    pointer-events: none; /* Prevent the icon from being clickable */
+  }
+  /*End Styles for Create Listing page */
+       
+  
+  /* Styles for View Item page */
+  .view-item-section {
+    background: linear-gradient(180deg, #5e259e, #320a4d);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .item-header {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .item-images {
+    flex: 1;
+  }
+  
+  .main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .thumbnail-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .item-price {
+    font-size: 2em;
+    color: #ffe600;
+  }
+  
+  .item-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .buy-now-button, .add-to-cart-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .buy-now-button {
+    background-color: #1100ff;
+  }
+  
+  .add-to-cart-button {
+    background-color: #003cff;
+  }
+  
+  .seller-info {
+    margin-top: 20px;
+  }
+  
+  .item-description {
+    margin-top: 20px;
+  }
+  
+  .comment-section {
+    margin-top: 20px;
+  }
+  
+  .comment-section textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+  }
+  
+  .ask-question-button {
+    padding: 10px 20px;
+    background-color: #1100ff;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  /*End Styles for View Item page */
+
+  /* Styles for Update Listing page */
+  .dashboard-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .update-listing-button {
+    margin-top: 20px;
+    background-color: #1100ff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .update-item-section {
+    width: 100%;
+    background: linear-gradient(180deg, #5e259e, #320a4d);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+  }
+  /*End Styles for Update Listing page */
+  
+  
+  /*Sign up login page stlye*/
+  .form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+  }
+  
+  .form-container {
+    background: linear-gradient(180deg, #5e259e, #320a4d); /* Purple gradient background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    color: #fff;
+  }
+  
+  .form-container h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #ffe600; /* Title color */
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .form-button {
+    background-color: #1100ff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .form-switch {
+    background: none;
+    border: none;
+    color: #ffe600;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+  }
+  /*End Sign up login page stlye*/
+  
+   /* Footer */
+   footer {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .col-md-4 {
+      width: calc(33.333% - 20px); /* 3 cards per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .image-upload-section {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .image-upload, .image-preview {
+      width: 100%;
+    }
+  
+    .image-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .item-header {
+      flex-direction: column;
+    }
+  
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header-actions {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+  
+    .header-search {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    header input[type="search"] {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  
+    .actions {
+      width: 100%;
+      justify-content: space-between;
+      position: static;
+      margin-top: 10px;
+    }
+  
+    .carousel-content {
+      gap: 5px;
+    }
+  
+    .carousel-content button {
+      padding: 10px;
+    }
+  
+    .col-sm-6 {
+      width: calc(50% - 20px); /* 2 cards per row on small screens */
+    }
+  
+    footer {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .col-12 {
+      width: calc(100% - 20px); /* 1 card per row on very small screens */
+    }
+  
+    .card-actions button {
+      flex: 1 1 100%;
+      margin-bottom: 10px;
+    }
+  
+    .card {
+      padding: 3px; /* Reduce padding on small screens */
+    }
+  
+    .image-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
